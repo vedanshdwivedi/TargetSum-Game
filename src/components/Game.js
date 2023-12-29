@@ -12,6 +12,8 @@ export default class Game extends Component {
   target = this.randomNumbers
     .slice(0, this.props.randomNumberCount - 2)
     .reduce((acc, element) => acc + element, 0);
+
+  // TODO: Shuffle the random numbers
   render() {
     return (
       <>
@@ -43,17 +45,21 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 40,
     marginHorizontal: 50,
+    borderRadius: 30,
   },
   buttonWrapper: {
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'space-around',
   },
   button: {
-    margin: 20,
-    marginHorizontal: 60,
-    padding: 20,
+    width: 150,
+    marginVertical: 25,
+    marginHorizontal: 15,
+    fontSize: 35,
     textAlign: 'center',
-    backgroundColor: '#bbb',
+    backgroundColor: '#ccc',
+    borderRadius: 30,
   },
 });

@@ -39,6 +39,7 @@ target 'TargetSum' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'CocoaAsyncSocket'
   target 'TargetSumTests' do
     inherit! :complete
     # Pods for testing
